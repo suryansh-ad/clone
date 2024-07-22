@@ -1,0 +1,988 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+::-webkit-scrollbar
+{
+    visibility: hidden;
+    display: none;
+}
+body{
+    background-color:#00050d;
+    color:white;
+   overflow-x: hidden;
+
+}
+*{
+    margin: 0;padding: 0;
+}
+#Layer_1{
+    transition: 0.3s;
+    display: inline-block;
+    transform: rotate(180deg);
+}
+.list:hover > #Layer_1
+{
+    transform: rotate(360deg);
+    fill: white;
+    stroke: white;
+}
+.list:hover > #Layer_1 path {
+    stroke: white;
+}
+nav{
+    height:6vh; 
+    width: 100vw;
+    transition: 0.2s ease;
+    display:flex;
+    justify-content: center;
+    position:sticky;
+    top:0;  
+    z-index: 10;
+}
+.dropdown{
+    height: 100%;
+}
+.head
+{
+    width: 60vw;
+    height: 100%;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    display: flex;
+    background-color:#00050d;
+    
+}
+
+.logo{
+    align-content:center;
+    font-family: "Rajdhani","sans-serif";
+    font-weight:600;
+    font-size: 2.6vh;
+    letter-spacing: 0px;
+}
+.list{
+    align-content: center;
+    text-align:center;
+    padding: 12px;
+    color: #b3b4b7;
+}
+.navigation
+{
+    height: 100%;
+    display:flex;
+    font-size: 2vh;
+    /* margin-left:1.5vw; */
+    font-weight: 600;
+    font-family: "Noto Sans", sans-serif;
+    
+}
+
+.navigation >.dropdown> .list{
+    display: inline-block;
+    color: #b3b4b7;
+}
+.navigation >.dropdown> .list > svg
+{
+    height: 1.4vh;
+    margin-left: 2px;
+    width: 1.3vw;
+    display: inline;
+}
+.dropdown > .list:hover{
+    background-color:#191e25;
+    color:white;
+}
+.list:hover{
+    background-color:#191e25;
+    color: white;
+}
+.search > svg{
+    height: 3vh;
+    display: inline;
+}
+.search{
+    margin-left: 1vw;
+    align-content: center;
+    padding:8px;
+}
+.search:hover{
+    background-color:#191e25;
+    
+}
+#user{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2vh;
+    font-weight: 500;
+    color: #b3b4b7;
+    display: inline;
+}
+.user{
+    height: 100%;
+    display:flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.user:hover{
+    background-color: #191e25;
+}
+.user > svg{
+    margin-left: 1vw;
+    height:70%;
+}
+
+/* making dropdown lists */
+
+.dropdown:hover .contents
+{
+    display: block;
+   
+}
+.dropdown:hover .catcon
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+}
+.dropdown:hover 
+{
+    display: block;
+}
+.contents
+{
+    display: none;
+}
+.contents li:hover 
+{
+    background-color: white;
+    color: black;
+}
+.contents:hover .list{
+    background-color:#191e25;
+    color: white;
+}
+.contents li 
+{
+    list-style-type: none;
+    height: 6svh;
+    display: block;
+   color:#b3b4b7;
+    text-align: center;
+    align-content: center;
+    background-color:#191e25;
+    
+}
+.catcon
+{
+ display:none;
+ height: 60svh;
+ width: 58svw;
+ left: 21vw;
+ border-bottom-left-radius: 10px;
+ border-bottom-right-radius: 10px;
+ position: absolute;
+ background-color: #191e25;
+ 
+}
+.genres label{
+font-size: 1.4em;
+display: block;
+margin-top: 3vh ;
+margin-bottom: 2vh ;
+}
+.ul2{
+    margin-top: 9vh;
+}
+ 
+.genres
+{
+  height: 100%;
+  width:fit-content;
+  display: flex;
+}
+
+.genres ul li{
+    list-style-type: none;
+    padding: 1em 1em;
+    border-radius: 10px;
+    font-size: 1.1em;
+    position: relative;
+    font-family: "Noto sans";
+    
+}
+.genres ul li:hover{
+    background-color: white;
+    color: black;
+}
+.feathead
+{
+    font-size: 1.4em;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+}
+.featured
+{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.featcont
+{
+    display: flex;
+    flex-direction: row;
+}
+#lang ul li {
+    list-style-type: none;
+    padding: 1em 1em;
+    font-size: 1.1em;
+    border-radius: 10px;
+    font-family: "Noto sans";
+}
+#lang ul li:hover{
+    background-color: white;
+    color: black;
+    
+}
+#heads
+{
+    color: rgb(107, 107, 249);
+}
+
+
+.contents ul li:hover
+{
+    z-index: 10;
+    color: black;
+    background-color: white;
+}
+.endli
+{
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius:6px ;
+}
+
+.title1 , .title2
+{
+    font-size: 1.2em;
+    margin-top: 2vh;
+    font-weight: 900;
+    color: rgb(135, 135, 255);
+    margin-bottom: 1.5vh;
+}
+
+.userdrop
+{
+    display: none;
+    position: absolute;
+    font-family: "Noto sans";
+    top: 6vh;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: fit-content;
+    width:25vw;
+    background-color: #191e25;
+
+}
+.user:hover .userdrop
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#foruser li{
+    list-style-type: none;
+    font-size: 1em;
+    padding: 1em 1em ;
+    border-radius: 10px;
+    margin-bottom: 2vh;
+    font-weight: 600;
+}
+
+#foruser li:hover
+{
+    background-color: white;
+    color: black;
+}
+
+.userhead1 , .userhead2
+{
+    display: flex;
+    flex-direction: column;
+}
+.star
+{
+    height: 3vh;
+}
+.add
+{
+    background-color:#191e25c4;
+    height: 3vh;
+    border-radius: 100px;
+}
+
+
+/* important */
+/*  */
+/*  */
+
+
+
+/* Navbar ends */
+
+/* Trailer slider - live count */
+.containertop
+{
+    
+    height: 65vh;
+    color: white;
+    display: flex;
+    overflow-x: visible;
+}
+.elements{
+    height: 100%;
+    width:100%;
+    scroll-snap-align: center;
+  
+}
+.screencontainer
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.screencontainer >.svg>#Layer_1
+{
+transform: rotate(-90deg);
+display: inline;
+width: 1vw;
+}
+.svg{
+    height: 100%;
+    width: 2%;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.moviecontainer
+{
+   
+    height: 100%;
+    width:100%;
+    display: flex;
+}
+.screencontainer >.svgright>#Layer_1
+{
+transform: rotate(90deg);
+display: inline;
+width: 1vw;
+}
+.trailer .svgright
+{
+
+    height: 100%;
+    width: 2%;
+}
+.svgright{
+    right: 0;
+    top: 180px;
+    position: absolute;
+    z-index: 100;
+    
+}
+.svgright{
+align-content: center;
+align-items: center;
+text-align: center;
+}
+/* for the 40% */
+/*  */
+/*  */
+
+.moviecontainer > a 
+{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    display: flex;
+
+}
+.rank
+{
+    font-weight: 600;
+    font-family: "Noto Sans", sans-serif;
+}
+.movieinfo
+{  
+    font-weight: 600;
+    font-family: "Noto Sans", sans-serif; 
+    width: 40%;
+    display: flex;
+    margin-left: 3vw;
+    gap: 2vh;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #00050d;
+
+}
+.available{
+    font-family: "Noto sans";
+    font-size: 1.1em;
+    font-weight: 700;
+    display: flex;
+    margin-top: 3vh;
+    height: 5.5%;
+    flex-direction: row;
+    gap: 1vw;
+}
+.available > svg
+{
+    height: 100%;
+    
+
+}
+.moviename
+{
+    font-family: "Teko", sans-serif;
+    font-size: 4.5rem;
+    color:red;
+}
+.movienamecont{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    height: fit-content;
+}
+.sub{
+    letter-spacing: 2.4vh;
+    padding-left: 1.2vw;
+    font-size: 1.1rem;
+    color: rgb(223, 230, 255);
+    margin-top: -2vh;
+
+}
+.buttons {
+    display: flex;
+    height: 15%;
+    grid-gap: 1.3vw ;
+
+}
+.buttons > svg 
+{
+    height: 100%;
+    cursor: pointer;  
+}
+.play{
+    transition: 0.2s ease-in-out;
+    padding: 1px;
+}
+.play:hover{
+    height: 105%;
+}
+
+.buttons > .label 
+{
+    height: 100%;
+    align-content: center;
+    text-align: center;
+
+}
+.pgrated
+{ 
+   padding-left: 4px;
+   padding-right: 4px;
+   text-align: center;
+   align-content: center;
+   font-family: "Oswald", sans-serif;
+   background-color: #2e2626cc;
+}
+.trailer
+{
+    width: 60%;
+    z-index: 1;
+    -webkit-mask-image: linear-gradient(to left, #00050d 90%, transparent 100%);
+    mask-image: linear-gradient(to left, #00050d 90%, transparent 100%);
+}
+.svgwatch
+{
+    height: 100%;
+    /* z-index: 9999; */
+    text-align: center;
+    align-content: center;
+}
+.svgwatch .rmbtns{
+    height: 60%;
+    align-content: center;
+}
+.watchlist{
+    margin-right: -0.5vw;
+}
+.watchlist ,.information
+{
+    background-color: #484a4f8c;
+    border-radius: 100px;
+    height: 50%;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+}
+.watchlist:hover {
+    height: 60%;
+    background-color: white;
+    stroke: black;
+}
+.watchlist:hover path{
+    stroke: black;
+}
+.information:hover
+{
+    background-color: white;
+    height: 60%;
+}
+.information:hover  circle{
+    stroke: black;
+}
+.information:hover  path{
+    stroke: black;
+}
+.information:hover  rect{
+    stroke: black;
+    stroke-width: 2px;
+}
+.info
+{
+    height: 100%;
+    text-align: center;
+    align-content: center;
+}
+
+/* video part */
+/*  */
+/*  */
+
+video{
+
+    width: 100%;
+    height: 100%   
+}
+#mutebtn{
+    position: absolute;
+    height: 4.5vh;
+    right: 5vw;
+    top: 10vh;
+    background-color: #2e353f63;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+
+/* anchor went lost */
+/* popups */
+
+.popup{
+    visibility: hidden;
+    position: absolute;
+    /* margin-left: -5vw; */
+    margin-top: 12vh;
+    border-radius: 4px;
+    font-family: "Noto Sans";
+    display: inline;
+    margin-right: 1vh;
+    background-color: white;
+    padding: 10px;
+    color: black;
+    transition: ease-in-out;
+}
+.info:hover > .popup 
+{
+    visibility: visible;
+}
+.svgwatch:hover > .popup 
+{
+    visibility: visible;
+}
+#Layer_1:hover path {
+stroke: blue;
+}
+/*  */
+/*  */
+/* active scroll buttons */
+/*  */
+/*  */
+
+#activescrollul{
+    height: 1vh;
+    gap: 3vh;
+    display: flex;
+    justify-content: center;
+}
+#activescroll
+{  
+    content: "";
+    list-style-type: none;
+   height: 100%;
+   width: 1vh;
+   border-radius: 100px;
+   background-color: #b3b4b7a2; 
+}
+#activescrollul li.active
+{
+    background-color: white;
+}
+
+
+/* amazon original series */
+/*  */
+/*  */
+/*  */
+
+.wholecontent
+{
+    padding-left: 5vw;
+    display: flex;
+    flex-direction: column ;
+   
+}
+.aos_head
+{
+    font-family: "Noto Sans";
+   font-size: 1.2em;
+   margin-top: 10vh;
+   margin-bottom: 5vh;
+   font-weight: 700;
+}
+#aos
+{
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+}
+#aos_content
+{
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    /* overflow-x: auto; */
+}
+.aos_lists
+{
+    scroll-snap-align:start;
+    height: 50vh;
+    border-radius: 10px;
+    width: 20%;
+    transition: 0.3s;
+    overflow: none;
+    flex-shrink: 0;
+    background-size: cover;
+}
+.aos_lists:hover 
+{
+    width: 40vw;
+    scroll-snap-align: start;
+    
+    background-image: url("me.JPG");
+}
+.aos_mirzapur
+{
+    background-image: url("mirzapur.png");
+    background-size: cover;
+}
+.aos_mirzapur:hover{
+    background-image: url(mirzapur2.png);
+}
+.aos_boys
+{
+    background-image: url(boys.png);
+}
+.aos_boys:hover{
+    background-image: url(boys2.png);
+    background-size: cover;
+}
+.aos_fallout
+{
+    background-image: url(fallout.png);
+}
+.aos_fallout:hover{
+    background-image: url(fallout2.png);
+    background-size: cover;
+}
+.aos_terminallist
+{
+    background-image: url(terminallist.png);
+}
+.aos_terminallist:hover{
+    background-image: url(terminal2.png);
+}
+.aos_genv
+{
+    background-image: url(genv.png);
+}
+.aos_genv:hover
+{
+    background-image: url(genv2.png) ;
+    background-size: cover;
+}
+.aos_farzi
+{
+    background-image: url(farzi.png);
+}
+.aos_farzi:hover{
+    background-image: url(farzi2.png);
+}
+
+.aos_info
+{
+    height: 100%;
+    width: 100%;
+    padding-left: 2vw;
+    display: none;
+    font-family: "Noto sans";
+}
+.aos_lists:hover .aos_info{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    justify-content: space-around;
+}
+.empty
+{
+    height:40% ;
+}
+.aos_info_mir
+{
+    font-size: 2.2em;
+    font-weight: 800;
+}
+.aos_buttons
+{
+    height: 30%;
+}
+/* 
+new section 
+recommended movies */
+/*  */
+/*  */
+.rm_head
+{
+    font-family: "Noto Sans";
+    font-size: 1.2em;
+    margin-top: 8vh;
+    font-weight: 700;
+}
+.recommendedmovies
+{
+overflow-x:auto;
+
+}
+.rm_content
+{
+    scroll-snap-type: x mandatory;
+    padding-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    padding-left:2vw;
+    gap: 3vw;
+    overflow-x: scroll;
+}
+
+.rmlists
+{
+    display: flex;
+    height: 20vh;
+    width: 18vw;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    overflow-y: hidden;
+    position: relative;
+    border-radius: 10px;
+    font-family: "Noto Sans";
+    transition: 0.3s ease-in-out;
+}
+.rmbtn
+{
+    font-family: "Noto sans";
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.rmimg
+{
+    width:100%;
+}
+
+.rmlists:hover{
+    height: 60vh;
+    transform: scale(1.1);
+}
+
+.rminfo
+{
+display: flex;
+gap: 2vh;
+padding-left: 1vw;
+flex-direction: column;
+}
+.rmplay
+{
+    height: 100%;
+}
+.rmbtn
+{
+height: 8vh;
+}
+.rmbtns
+{
+    height: 70%;
+    background-color: #191e25;
+    border-radius: 100px;
+    padding: 1vh;
+}
+.rmbtns:hover 
+{
+    background-color: white;
+    
+}
+.rmbtns:hover circle{
+    stroke: black;
+}
+.rmbtns:hover path
+{
+    stroke: black;
+}
+.rmbtns:hover rect
+{
+    stroke: black;
+}
+
+.duration
+{
+    color: rgba(255, 255, 255, 0.397);
+    font-weight: 700;
+    display: flex;
+    justify-content: space-around;
+}
+.rmi
+{
+    color: rgba(255, 255, 255, 0.397);
+    font-weight: 800;font-size: 1em;
+     text-overflow: ellipsis;
+    overflow: hidden;
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 2;
+}
+
+/* anime */
+/*  */
+.Anime
+{
+    overflow-x: auto;
+
+}           
+
+.anime_content
+{
+    scroll-snap-type: x mandatory;
+    padding-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    padding-left:2vw;
+    gap: 3vw;   
+    position: relative;
+    overflow-x: scroll;
+}
+
+/* footer */
+/*  */
+
+footer
+{
+height: 50svh;
+width: 100svw;
+display: flex;
+font-family: "Rajdhani";
+padding-top: 20svh;
+justify-content:center;
+border-radius: 20px;
+
+}
+.footer
+{
+    background-color:#000000;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    gap: 2vh;
+    cursor: default;
+}
+.msg_pro
+{
+    display: flex;
+    gap: 1.2vw;
+    flex-direction: row;
+}
+.thankyou
+{
+    width: 60%;
+    padding: 2vh;
+    /* border: 0.1px groove rgb(152, 149, 149); */
+    border-radius: 4px;
+}
+.problems
+{
+    /* border: 0.1px groove rgb(152, 149, 149); */
+    padding-top: 2vh;
+    padding-left: 2vw;
+    background-color: #191e25;
+    border-radius: 15px ;
+
+}
+.problems:hover{
+    color: rgb(162, 162, 255);
+    cursor: default;
+}
+li
+{
+    list-style-type:decimal;
+    font-size: 1.2em;
+}
+.help
+{
+    width: 100%;
+    text-align: center;
+    color: rgb(200, 141, 255);
+   padding: 1vw;
+   font-size: 2.1rem;
+}
+.btn
+    {
+      background-color: #0088ff00; 
+      cursor: pointer;
+       padding: 0.8rem 2rem;
+        color: white;
+       border-radius: 8px;
+       font-family: "Rajdhani";
+       font-weight: 600;
+       border: none;
+       font-size: 1.1rem;
+       color: yellow;
+       transition: 0.3s ease-in-out;
+    }
+    .btn:hover
+    {
+        background: linear-gradient(to right, #5673b1 ,#407bfa, #0051ff);
+        box-shadow: 2px 2px yellow;
+    }
